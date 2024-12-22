@@ -5,5 +5,12 @@ format: jb-book
 root: intro
 chapters:
 - file: markdown
+- file: resume 
 - file: notebooks
 - file: markdown-notebooks
+- file: toc
+
+toc:
+  - title: "Resume"
+    url: "assets/resume.pdf"
+    type: file
