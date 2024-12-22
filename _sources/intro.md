@@ -1,3 +1,3 @@
-# Welcome to Major project
+# introduction
 
-Create a JupyterBook website with your resume, embedded video, and final code. Include links to MLFlow/DagsHub experiments, Docker Hub container, deployed model, and Streamlit app.
+Credit fraud Identification
