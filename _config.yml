@@ -1,28 +1,47 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
+# General book information
+title: Major Project
+author: Bhavya khilrani
 logo: logo.png
 
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
+# Execution settings for notebooks
 execute:
-  execute_notebooks: force
-
-# Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
+  execute_notebooks: force  # Always re-execute notebooks when building
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/bhavyak10/major_project  # GitHub repository URL
+  path_to_book: ""  # Leave empty if the book is in the root of the repository
+  branch: gh-pages  # Branch used for deployment (gh-pages is standard for GitHub Pages)
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+# GitHub Pages deployment configuration
+baseurl: "/major_project"  # Base URL for your project (repository name for GitHub Pages)
+
+# PDF output configuration
+latex:
+  latex_documents:
+    targetname: book.tex  # The name of the LaTeX file for PDF generation
+
+# HTML theme settings
 html:
-  use_issues_button: true
-  use_repository_button: true
+  use_issues_button: true  # Add a button linking to GitHub issues
+  use_repository_button: true  # Add a button linking to the repository
+  use_edit_page_button: true  # Add an "Edit this page" button
+  edit_page_url_template: "https://github.com/bhavyak10/major_project/edit/main/{path}"
+  favicon: logo.png  # Path to the favicon for the website
+  theme:
+    name: pydata_sphinx_theme
+    options:
+      github_url: https://github.com/bhavyak10/major_project
+      twitter_url: https://twitter.com/your_twitter_handle  # Replace with your Twitter handle
+      search_bar_text: "Search the book..."
+      navbar_end: ["search-field.html", "navbar-icon-links.html"]
+      use_download_button: true  # Allow users to download the book
+
+# Add custom CSS and JavaScript (optional)
+extra_css:
+  - custom.css  # Add a file named custom.css in _static if you want custom styles
+extra_js:
+  - custom.js  # Add a file named custom.js in _static for custom JavaScript
