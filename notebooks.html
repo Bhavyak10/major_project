@@ -170,6 +170,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="resume.html">Resume</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Experiment 3: Feature Engineering and Attribute Combination</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
@@ -384,7 +385,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <p>#ML experiments</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mlflow
 <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>dagshub
@@ -393,153 +395,188 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mlflow
-  Downloading mlflow-2.19.0-py3-none-any.whl.metadata (30 kB)
-Collecting mlflow-skinny==2.19.0 (from mlflow)
-  Downloading mlflow_skinny-2.19.0-py3-none-any.whl.metadata (31 kB)
-Collecting Flask&lt;4 (from mlflow)
-  Downloading flask-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+  Using cached mlflow-2.19.0-py3-none-any.whl.metadata (30 kB)
+Requirement already satisfied: mlflow-skinny==2.19.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (2.19.0)
+Requirement already satisfied: Flask&lt;4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (3.1.0)
 Requirement already satisfied: Jinja2&lt;4,&gt;=3.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (3.1.4)
-Collecting alembic!=1.10.0,&lt;2 (from mlflow)
-  Downloading alembic-1.14.0-py3-none-any.whl.metadata (7.4 kB)
-Collecting docker&lt;8,&gt;=4.0.0 (from mlflow)
-  Downloading docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)
-Collecting graphene&lt;4 (from mlflow)
-  Downloading graphene-3.4.3-py2.py3-none-any.whl.metadata (6.9 kB)
-Collecting markdown&lt;4,&gt;=3.3 (from mlflow)
-  Downloading Markdown-3.7-py3-none-any.whl.metadata (7.0 kB)
-Collecting matplotlib&lt;4 (from mlflow)
-  Downloading matplotlib-3.10.0-cp313-cp313-win_amd64.whl.metadata (11 kB)
+Requirement already satisfied: alembic!=1.10.0,&lt;2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (1.14.0)
+Requirement already satisfied: docker&lt;8,&gt;=4.0.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (7.1.0)
+Requirement already satisfied: graphene&lt;4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (3.4.3)
+Requirement already satisfied: markdown&lt;4,&gt;=3.3 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (3.7)
+Requirement already satisfied: matplotlib&lt;4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (3.10.0)
 Requirement already satisfied: numpy&lt;3 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (2.2.0)
 Requirement already satisfied: pandas&lt;3 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (2.2.3)
 Requirement already satisfied: pyarrow&lt;19,&gt;=4.0.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (18.1.0)
 Requirement already satisfied: scikit-learn&lt;2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (1.6.0)
 Requirement already satisfied: scipy&lt;2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (1.14.1)
 Requirement already satisfied: sqlalchemy&lt;3,&gt;=1.4.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (2.0.36)
-Collecting waitress&lt;4 (from mlflow)
-  Downloading waitress-3.0.2-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: waitress&lt;4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (3.0.2)
 Requirement already satisfied: cachetools&lt;6,&gt;=5.0.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (5.5.0)
 Requirement already satisfied: click&lt;9,&gt;=7.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (8.1.7)
-Collecting cloudpickle&lt;4 (from mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading cloudpickle-3.1.0-py3-none-any.whl.metadata (7.0 kB)
-Collecting databricks-sdk&lt;1,&gt;=0.20.0 (from mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading databricks_sdk-0.40.0-py3-none-any.whl.metadata (38 kB)
+Requirement already satisfied: cloudpickle&lt;4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (3.1.0)
+Requirement already satisfied: databricks-sdk&lt;1,&gt;=0.20.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (0.40.0)
 Requirement already satisfied: gitpython&lt;4,&gt;=3.1.9 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (3.1.43)
 Requirement already satisfied: importlib_metadata!=4.7.0,&lt;9,&gt;=3.7.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (8.5.0)
-Collecting opentelemetry-api&lt;3,&gt;=1.9.0 (from mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading opentelemetry_api-1.29.0-py3-none-any.whl.metadata (1.4 kB)
-Collecting opentelemetry-sdk&lt;3,&gt;=1.9.0 (from mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading opentelemetry_sdk-1.29.0-py3-none-any.whl.metadata (1.5 kB)
+Requirement already satisfied: opentelemetry-api&lt;3,&gt;=1.9.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (1.29.0)
+Requirement already satisfied: opentelemetry-sdk&lt;3,&gt;=1.9.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (1.29.0)
 Requirement already satisfied: packaging&lt;25 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (24.2)
 Requirement already satisfied: protobuf&lt;6,&gt;=3.12.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (5.29.2)
 Requirement already satisfied: pyyaml&lt;7,&gt;=5.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (6.0.2)
 Requirement already satisfied: requests&lt;3,&gt;=2.17.3 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (2.32.3)
-Collecting sqlparse&lt;1,&gt;=0.4.0 (from mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
-Collecting Mako (from alembic!=1.10.0,&lt;2-&gt;mlflow)
-  Downloading Mako-1.3.8-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: sqlparse&lt;1,&gt;=0.4.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow-skinny==2.19.0-&gt;mlflow) (0.5.3)
+Requirement already satisfied: Mako in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from alembic!=1.10.0,&lt;2-&gt;mlflow) (1.3.8)
 Requirement already satisfied: typing-extensions&gt;=4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from alembic!=1.10.0,&lt;2-&gt;mlflow) (4.12.2)
 Requirement already satisfied: pywin32&gt;=304 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from docker&lt;8,&gt;=4.0.0-&gt;mlflow) (308)
 Requirement already satisfied: urllib3&gt;=1.26.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from docker&lt;8,&gt;=4.0.0-&gt;mlflow) (2.2.3)
-Collecting Werkzeug&gt;=3.1 (from Flask&lt;4-&gt;mlflow)
-  Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
-Collecting itsdangerous&gt;=2.2 (from Flask&lt;4-&gt;mlflow)
-  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Requirement already satisfied: Werkzeug&gt;=3.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from Flask&lt;4-&gt;mlflow) (3.1.3)
+Requirement already satisfied: itsdangerous&gt;=2.2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from Flask&lt;4-&gt;mlflow) (2.2.0)
 Requirement already satisfied: blinker&gt;=1.9 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from Flask&lt;4-&gt;mlflow) (1.9.0)
-Collecting graphql-core&lt;3.3,&gt;=3.1 (from graphene&lt;4-&gt;mlflow)
-  Downloading graphql_core-3.2.5-py3-none-any.whl.metadata (10 kB)
-Collecting graphql-relay&lt;3.3,&gt;=3.1 (from graphene&lt;4-&gt;mlflow)
-  Downloading graphql_relay-3.2.0-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: graphql-core&lt;3.3,&gt;=3.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from graphene&lt;4-&gt;mlflow) (3.2.5)
+Requirement already satisfied: graphql-relay&lt;3.3,&gt;=3.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from graphene&lt;4-&gt;mlflow) (3.2.0)
 Requirement already satisfied: python-dateutil&lt;3,&gt;=2.7.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from graphene&lt;4-&gt;mlflow) (2.9.0.post0)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from Jinja2&lt;4,&gt;=3.0-&gt;mlflow) (3.0.2)
-Collecting contourpy&gt;=1.0.1 (from matplotlib&lt;4-&gt;mlflow)
-  Downloading contourpy-1.3.1-cp313-cp313-win_amd64.whl.metadata (5.4 kB)
-Collecting cycler&gt;=0.10 (from matplotlib&lt;4-&gt;mlflow)
-  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
-Collecting fonttools&gt;=4.22.0 (from matplotlib&lt;4-&gt;mlflow)
-  Downloading fonttools-4.55.3-cp313-cp313-win_amd64.whl.metadata (168 kB)
-Collecting kiwisolver&gt;=1.3.1 (from matplotlib&lt;4-&gt;mlflow)
-  Downloading kiwisolver-1.4.7-cp313-cp313-win_amd64.whl.metadata (6.4 kB)
+Requirement already satisfied: contourpy&gt;=1.0.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from matplotlib&lt;4-&gt;mlflow) (1.3.1)
+Requirement already satisfied: cycler&gt;=0.10 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from matplotlib&lt;4-&gt;mlflow) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from matplotlib&lt;4-&gt;mlflow) (4.55.3)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from matplotlib&lt;4-&gt;mlflow) (1.4.7)
 Requirement already satisfied: pillow&gt;=8 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from matplotlib&lt;4-&gt;mlflow) (11.0.0)
-Collecting pyparsing&gt;=2.3.1 (from matplotlib&lt;4-&gt;mlflow)
-  Downloading pyparsing-3.2.0-py3-none-any.whl.metadata (5.0 kB)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from matplotlib&lt;4-&gt;mlflow) (3.2.0)
 Requirement already satisfied: pytz&gt;=2020.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pandas&lt;3-&gt;mlflow) (2024.2)
 Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pandas&lt;3-&gt;mlflow) (2024.2)
 Requirement already satisfied: joblib&gt;=1.2.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from scikit-learn&lt;2-&gt;mlflow) (1.4.2)
 Requirement already satisfied: threadpoolctl&gt;=3.1.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from scikit-learn&lt;2-&gt;mlflow) (3.5.0)
 Requirement already satisfied: colorama in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from click&lt;9,&gt;=7.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (0.4.6)
-Collecting google-auth~=2.0 (from databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading google_auth-2.37.0-py2.py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: google-auth~=2.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (2.37.0)
 Requirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gitpython&lt;4,&gt;=3.1.9-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (4.0.11)
 Requirement already satisfied: zipp&gt;=3.20 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from importlib_metadata!=4.7.0,&lt;9,&gt;=3.7.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (3.21.0)
-Collecting deprecated&gt;=1.2.6 (from opentelemetry-api&lt;3,&gt;=1.9.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading Deprecated-1.2.15-py2.py3-none-any.whl.metadata (5.5 kB)
-Collecting opentelemetry-semantic-conventions==0.50b0 (from opentelemetry-sdk&lt;3,&gt;=1.9.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading opentelemetry_semantic_conventions-0.50b0-py3-none-any.whl.metadata (2.3 kB)
+Requirement already satisfied: deprecated&gt;=1.2.6 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from opentelemetry-api&lt;3,&gt;=1.9.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (1.2.15)
+Requirement already satisfied: opentelemetry-semantic-conventions==0.50b0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from opentelemetry-sdk&lt;3,&gt;=1.9.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (0.50b0)
 Requirement already satisfied: six&gt;=1.5 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from python-dateutil&lt;3,&gt;=2.7.0-&gt;graphene&lt;4-&gt;mlflow) (1.17.0)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from requests&lt;3,&gt;=2.17.3-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (3.4.0)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from requests&lt;3,&gt;=2.17.3-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (3.10)
 Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from requests&lt;3,&gt;=2.17.3-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (2024.12.14)
-Collecting wrapt&lt;2,&gt;=1.10 (from deprecated&gt;=1.2.6-&gt;opentelemetry-api&lt;3,&gt;=1.9.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading wrapt-1.17.0-cp313-cp313-win_amd64.whl.metadata (6.5 kB)
+Requirement already satisfied: wrapt&lt;2,&gt;=1.10 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from deprecated&gt;=1.2.6-&gt;opentelemetry-api&lt;3,&gt;=1.9.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (1.17.0)
 Requirement already satisfied: smmap&lt;6,&gt;=3.0.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;gitpython&lt;4,&gt;=3.1.9-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (5.0.1)
-Collecting pyasn1-modules&gt;=0.2.1 (from google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading pyasn1_modules-0.4.1-py3-none-any.whl.metadata (3.5 kB)
-Collecting rsa&lt;5,&gt;=3.1.4 (from google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading rsa-4.9-py3-none-any.whl.metadata (4.2 kB)
-Collecting pyasn1&lt;0.7.0,&gt;=0.4.6 (from pyasn1-modules&gt;=0.2.1-&gt;google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow)
-  Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
-Downloading mlflow-2.19.0-py3-none-any.whl (27.4 MB)
-   ---------------------------------------- 0.0/27.4 MB ? eta -:--:--
-   ------ --------------------------------- 4.7/27.4 MB 24.3 MB/s eta 0:00:01
-   ------------------ --------------------- 12.6/27.4 MB 30.7 MB/s eta 0:00:01
-   ------------------------------ --------- 21.0/27.4 MB 33.9 MB/s eta 0:00:01
-   ---------------------------------------  27.3/27.4 MB 35.2 MB/s eta 0:00:01
-   ---------------------------------------- 27.4/27.4 MB 32.1 MB/s eta 0:00:00
-Downloading mlflow_skinny-2.19.0-py3-none-any.whl (5.9 MB)
-   ---------------------------------------- 0.0/5.9 MB ? eta -:--:--
-   ---------------------------------------  5.8/5.9 MB 32.4 MB/s eta 0:00:01
-   ---------------------------------------- 5.9/5.9 MB 27.8 MB/s eta 0:00:00
-Downloading alembic-1.14.0-py3-none-any.whl (233 kB)
-Downloading docker-7.1.0-py3-none-any.whl (147 kB)
-Downloading flask-3.1.0-py3-none-any.whl (102 kB)
-Downloading graphene-3.4.3-py2.py3-none-any.whl (114 kB)
-Downloading Markdown-3.7-py3-none-any.whl (106 kB)
-Downloading matplotlib-3.10.0-cp313-cp313-win_amd64.whl (8.0 MB)
-   ---------------------------------------- 0.0/8.0 MB ? eta -:--:--
-   ------------------------------------- -- 7.6/8.0 MB 36.8 MB/s eta 0:00:01
-   ---------------------------------------- 8.0/8.0 MB 32.3 MB/s eta 0:00:00
-Downloading waitress-3.0.2-py3-none-any.whl (56 kB)
-Downloading cloudpickle-3.1.0-py3-none-any.whl (22 kB)
-Downloading contourpy-1.3.1-cp313-cp313-win_amd64.whl (220 kB)
-Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
-Downloading databricks_sdk-0.40.0-py3-none-any.whl (629 kB)
-   ---------------------------------------- 0.0/629.7 kB ? eta -:--:--
-   --------------------------------------- 629.7/629.7 kB 24.2 MB/s eta 0:00:00
-Downloading fonttools-4.55.3-cp313-cp313-win_amd64.whl (2.2 MB)
-   ---------------------------------------- 0.0/2.2 MB ? eta -:--:--
-   ---------------------------------------- 2.2/2.2 MB 29.0 MB/s eta 0:00:00
-Downloading graphql_core-3.2.5-py3-none-any.whl (203 kB)
-Downloading graphql_relay-3.2.0-py3-none-any.whl (16 kB)
-Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
-Downloading kiwisolver-1.4.7-cp313-cp313-win_amd64.whl (55 kB)
-Downloading opentelemetry_api-1.29.0-py3-none-any.whl (64 kB)
-Downloading opentelemetry_sdk-1.29.0-py3-none-any.whl (118 kB)
-Downloading opentelemetry_semantic_conventions-0.50b0-py3-none-any.whl (166 kB)
-Downloading pyparsing-3.2.0-py3-none-any.whl (106 kB)
-Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
-Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
-Downloading Mako-1.3.8-py3-none-any.whl (78 kB)
-Downloading Deprecated-1.2.15-py2.py3-none-any.whl (9.9 kB)
-Downloading google_auth-2.37.0-py2.py3-none-any.whl (209 kB)
-Downloading pyasn1_modules-0.4.1-py3-none-any.whl (181 kB)
-Downloading rsa-4.9-py3-none-any.whl (34 kB)
-Downloading wrapt-1.17.0-cp313-cp313-win_amd64.whl (38 kB)
-Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
-Installing collected packages: wrapt, Werkzeug, waitress, sqlparse, pyparsing, pyasn1, markdown, Mako, kiwisolver, itsdangerous, graphql-core, fonttools, cycler, contourpy, cloudpickle, rsa, pyasn1-modules, matplotlib, graphql-relay, Flask, docker, deprecated, alembic, opentelemetry-api, graphene, google-auth, opentelemetry-semantic-conventions, databricks-sdk, opentelemetry-sdk, mlflow-skinny, mlflow
+Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (0.4.1)
+Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (4.9)
+Requirement already satisfied: pyasn1&lt;0.7.0,&gt;=0.4.6 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (0.6.1)
+Using cached mlflow-2.19.0-py3-none-any.whl (27.4 MB)
+Installing collected packages: mlflow
+Successfully installed mlflow-2.19.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting dagshub
+  Downloading dagshub-0.4.0-py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: PyYAML&gt;=5 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (6.0.2)
+Collecting appdirs&gt;=1.4.4 (from dagshub)
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+Requirement already satisfied: click&gt;=8.0.4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (8.1.7)
+Collecting httpx&gt;=0.23.0 (from dagshub)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: GitPython&gt;=3.1.29 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (3.1.43)
+Requirement already satisfied: rich&gt;=13.1.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (13.9.4)
+Collecting dacite~=1.6.0 (from dagshub)
+  Downloading dacite-1.6.0-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: tenacity&gt;=8.2.2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (9.0.0)
+Collecting gql[requests] (from dagshub)
+  Downloading gql-3.5.0-py2.py3-none-any.whl.metadata (9.2 kB)
+Collecting dataclasses-json (from dagshub)
+  Downloading dataclasses_json-0.6.7-py3-none-any.whl.metadata (25 kB)
+Requirement already satisfied: pandas in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (2.2.3)
+Collecting treelib&gt;=1.6.4 (from dagshub)
+  Downloading treelib-1.7.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting pathvalidate&gt;=3.0.0 (from dagshub)
+  Downloading pathvalidate-3.2.1-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: python-dateutil in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (2.9.0.post0)
+Collecting boto3 (from dagshub)
+  Downloading boto3-1.35.86-py3-none-any.whl.metadata (6.7 kB)
+Collecting dagshub-annotation-converter&gt;=0.1.0 (from dagshub)
+  Downloading dagshub_annotation_converter-0.1.2-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: colorama in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from click&gt;=8.0.4-&gt;dagshub) (0.4.6)
+Collecting lxml (from dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub)
+  Downloading lxml-5.3.0-cp313-cp313-win_amd64.whl.metadata (3.9 kB)
+Requirement already satisfied: pillow in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (11.0.0)
+Requirement already satisfied: pydantic&gt;=2.0.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (2.10.4)
+Requirement already satisfied: typing-extensions in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (4.12.2)
+Requirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from GitPython&gt;=3.1.29-&gt;dagshub) (4.0.11)
+Requirement already satisfied: anyio in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from httpx&gt;=0.23.0-&gt;dagshub) (4.7.0)
+Requirement already satisfied: certifi in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from httpx&gt;=0.23.0-&gt;dagshub) (2024.12.14)
+Collecting httpcore==1.* (from httpx&gt;=0.23.0-&gt;dagshub)
+  Downloading httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: idna in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from httpx&gt;=0.23.0-&gt;dagshub) (3.10)
+Requirement already satisfied: h11&lt;0.15,&gt;=0.13 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from httpcore==1.*-&gt;httpx&gt;=0.23.0-&gt;dagshub) (0.14.0)
+Requirement already satisfied: markdown-it-py&gt;=2.2.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from rich&gt;=13.1.0-&gt;dagshub) (3.0.0)
+Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.13.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from rich&gt;=13.1.0-&gt;dagshub) (2.18.0)
+Requirement already satisfied: six in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from treelib&gt;=1.6.4-&gt;dagshub) (1.17.0)
+Collecting botocore&lt;1.36.0,&gt;=1.35.86 (from boto3-&gt;dagshub)
+  Downloading botocore-1.35.86-py3-none-any.whl.metadata (5.7 kB)
+Collecting jmespath&lt;2.0.0,&gt;=0.7.1 (from boto3-&gt;dagshub)
+  Downloading jmespath-1.0.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting s3transfer&lt;0.11.0,&gt;=0.10.0 (from boto3-&gt;dagshub)
+  Downloading s3transfer-0.10.4-py3-none-any.whl.metadata (1.7 kB)
+Collecting marshmallow&lt;4.0.0,&gt;=3.18.0 (from dataclasses-json-&gt;dagshub)
+  Downloading marshmallow-3.23.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting typing-inspect&lt;1,&gt;=0.4.0 (from dataclasses-json-&gt;dagshub)
+  Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+Requirement already satisfied: graphql-core&lt;3.3,&gt;=3.2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gql[requests]-&gt;dagshub) (3.2.5)
+Collecting yarl&lt;2.0,&gt;=1.6 (from gql[requests]-&gt;dagshub)
+  Downloading yarl-1.18.3-cp313-cp313-win_amd64.whl.metadata (71 kB)
+Collecting backoff&lt;3.0,&gt;=1.11.1 (from gql[requests]-&gt;dagshub)
+  Downloading backoff-2.2.1-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: requests&lt;3,&gt;=2.26 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gql[requests]-&gt;dagshub) (2.32.3)
+Collecting requests-toolbelt&lt;2,&gt;=1.0.0 (from gql[requests]-&gt;dagshub)
+  Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: numpy&gt;=1.26.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pandas-&gt;dagshub) (2.2.0)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pandas-&gt;dagshub) (2024.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pandas-&gt;dagshub) (2024.2)
+Requirement already satisfied: sniffio&gt;=1.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from anyio-&gt;httpx&gt;=0.23.0-&gt;dagshub) (1.3.1)
+Requirement already satisfied: urllib3!=2.2.0,&lt;3,&gt;=1.25.4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from botocore&lt;1.36.0,&gt;=1.35.86-&gt;boto3-&gt;dagshub) (2.2.3)
+Requirement already satisfied: smmap&lt;6,&gt;=3.0.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;GitPython&gt;=3.1.29-&gt;dagshub) (5.0.1)
+Requirement already satisfied: mdurl~=0.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from markdown-it-py&gt;=2.2.0-&gt;rich&gt;=13.1.0-&gt;dagshub) (0.1.2)
+Requirement already satisfied: packaging&gt;=17.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from marshmallow&lt;4.0.0,&gt;=3.18.0-&gt;dataclasses-json-&gt;dagshub) (24.2)
+Requirement already satisfied: annotated-types&gt;=0.6.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pydantic&gt;=2.0.0-&gt;dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (0.7.0)
+Requirement already satisfied: pydantic-core==2.27.2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pydantic&gt;=2.0.0-&gt;dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (2.27.2)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from requests&lt;3,&gt;=2.26-&gt;gql[requests]-&gt;dagshub) (3.4.0)
+Collecting mypy-extensions&gt;=0.3.0 (from typing-inspect&lt;1,&gt;=0.4.0-&gt;dataclasses-json-&gt;dagshub)
+  Downloading mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting multidict&gt;=4.0 (from yarl&lt;2.0,&gt;=1.6-&gt;gql[requests]-&gt;dagshub)
+  Downloading multidict-6.1.0-cp313-cp313-win_amd64.whl.metadata (5.1 kB)
+Collecting propcache&gt;=0.2.0 (from yarl&lt;2.0,&gt;=1.6-&gt;gql[requests]-&gt;dagshub)
+  Downloading propcache-0.2.1-cp313-cp313-win_amd64.whl.metadata (9.5 kB)
+Downloading dagshub-0.4.0-py3-none-any.whl (254 kB)
+Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Downloading dacite-1.6.0-py3-none-any.whl (12 kB)
+Downloading dagshub_annotation_converter-0.1.2-py3-none-any.whl (33 kB)
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.7-py3-none-any.whl (78 kB)
+Downloading pathvalidate-3.2.1-py3-none-any.whl (23 kB)
+Downloading treelib-1.7.0-py3-none-any.whl (18 kB)
+Downloading boto3-1.35.86-py3-none-any.whl (139 kB)
+Downloading dataclasses_json-0.6.7-py3-none-any.whl (28 kB)
+Downloading backoff-2.2.1-py3-none-any.whl (15 kB)
+Downloading botocore-1.35.86-py3-none-any.whl (13.3 MB)
+   ---------------------------------------- 0.0/13.3 MB ? eta -:--:--
+   ------------ --------------------------- 4.2/13.3 MB 21.9 MB/s eta 0:00:01
+   -------------------------------- ------- 10.7/13.3 MB 26.5 MB/s eta 0:00:01
+   ---------------------------------------- 13.3/13.3 MB 25.3 MB/s eta 0:00:00
+Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Downloading marshmallow-3.23.2-py3-none-any.whl (49 kB)
+Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Downloading s3transfer-0.10.4-py3-none-any.whl (83 kB)
+Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+Downloading yarl-1.18.3-cp313-cp313-win_amd64.whl (315 kB)
+Downloading gql-3.5.0-py2.py3-none-any.whl (74 kB)
+Downloading lxml-5.3.0-cp313-cp313-win_amd64.whl (3.8 MB)
+   ---------------------------------------- 0.0/3.8 MB ? eta -:--:--
+   ---------------------------------------- 3.8/3.8 MB 30.9 MB/s eta 0:00:00
+Downloading multidict-6.1.0-cp313-cp313-win_amd64.whl (28 kB)
+Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Downloading propcache-0.2.1-cp313-cp313-win_amd64.whl (43 kB)
+Installing collected packages: appdirs, treelib, propcache, pathvalidate, mypy-extensions, multidict, marshmallow, lxml, jmespath, httpcore, dacite, backoff, yarl, typing-inspect, requests-toolbelt, httpx, botocore, s3transfer, gql, dataclasses-json, dagshub-annotation-converter, boto3, dagshub
 </pre></div>
 </div>
 </div>
@@ -591,7 +628,7 @@ Installing collected packages: wrapt, Werkzeug, waitress, sqlparse, pyparsing, p
 <div class="cell_output docutils container">
 <div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">                                       <span style="font-weight: bold">❗❗❗ AUTHORIZATION REQUIRED ❗❗❗</span>                                        
 </pre>
-</div><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "c56e9a42069148c6bdee51e4a9a97f8f"}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Open the following link in your browser to authorize the client:
+</div><script type="application/vnd.jupyter.widget-view+json">{"model_id": "c56e9a42069148c6bdee51e4a9a97f8f", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Open the following link in your browser to authorize the client:
 https://dagshub.com/login/oauth/authorize?state=981e40bb-ae47-40b3-85a7-fcc22659c2fb&amp;client_id=32b60ba385aa7cecf24046d8195a71c07dd345d9657977863b52e7748e0f0f28&amp;middleman_request_id=332c3cc7bb8b1d60dcecbda4fd0b38f32b7be468015458479b8cb9fadf64293a
 </pre></div>
 </div>
@@ -881,7 +918,7 @@ Name: proportion, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "69d8f8237fc542b4906b1c811f708618"}</script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "69d8f8237fc542b4906b1c811f708618", "version_major": 2, "version_minor": 0}</script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="nn">&lt;ipython-input-8-be32910d9f9d&gt;</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 

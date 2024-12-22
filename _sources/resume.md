@@ -1,4 +1,4 @@
-# Bhavya Khilrani  
+# Resume 
 **Email:** bhavyakhilrani@gmail.com | **Phone:** +1 (716) 573-6901  
 **LinkedIn:** [Bhavya Khilrani](https://www.linkedin.com/in/bhavya-khilrani-2b6665188/)  
 
