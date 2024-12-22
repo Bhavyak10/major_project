@@ -1,6 +1,7 @@
 format: jb-book
 root: intro
 chapters:
-  - file: markdown
+  - file: resume
+  - file: demovideo
   - file: notebooks
-  - file: markdown-notebooks
+  - file: linktoprojects
