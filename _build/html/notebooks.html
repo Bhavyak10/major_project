@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Experiment 3: Feature Engineering and Attribute Combination &#8212; Major Project</title>
+    <title>ML experiments &#8212; Major Project</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -64,8 +64,8 @@
     <link rel="icon" href="_static/logo.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
-    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="Links to Project:" href="linktoprojects.html" />
+    <link rel="prev" title="Demo video" href="demovideo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -165,15 +165,26 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to Major project
+                    Introduction
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="resume.html">Resume</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Experiment 3: Feature Engineering and Attribute Combination</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demovideo.html">Demo video</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">ML experiments</a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="linktoprojects.html">Links to Project:</a></li>
 </ul>
 
     </div>
@@ -360,7 +371,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -371,11 +384,31 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Experiment 3: Feature Engineering and Attribute Combination</h1>
+    <h1>ML experiments</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ML experiments</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-create-normalized-3nf-tables-customers-terminals-transactions">Task 1: Create normalized 3NF tables: Customers, Terminals, Transactions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-fetch-data-from-the-database-and-load-into-pandas-dataframe-using-join-statement">#Task 2: Fetch data from the database and load into Pandas DataFrame using join statement</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-stratified-train-test-split">Task-3 Stratified train-test split</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-eda-using-yprofile-and-correlation-matrix">Task-4 EDA using yprofile and correlation matrix</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-1-preprocessing-pipeline-with-logistic-regression-and-mlflow-logging">Experiment 1: Preprocessing Pipeline with Logistic Regression and MLflow Logging</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-2-preprocessing-pipeline-with-multiple-classifiers-and-mlflow-logging">Experiment 2: Preprocessing Pipeline with Multiple Classifiers and MLflow Logging</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-3-feature-engineering-and-attribute-combination">Experiment 3: Feature Engineering and Attribute Combination</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-4-feature-selection-using-correlation-threshold-feature-importance-and-variance-threshold">Experiment 4: Feature Selection using Correlation Threshold, Feature Importance, and Variance Threshold</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-5-pca-for-dimensionality-reduction">Experiment 5: PCA for Dimensionality Reduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-6-trainind-svm-model-with-preprocessing-evaluation-and-mlflow-logging">Experiment 6: Trainind SVM Model with Preprocessing, Evaluation, and MLflow Logging</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-7-training-a-naive-bayes-model-with-evaluation-visualization-and-mlflow-logging">Experiment 7: Training a Naive Bayes Model with Evaluation, Visualization, and MLflow Logging</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -385,7 +418,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>#ML experiments</p>
+  <section id="ml-experiments">
+<h1>ML experiments<a class="headerlink" href="#ml-experiments" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mlflow
@@ -395,8 +429,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mlflow
-  Using cached mlflow-2.19.0-py3-none-any.whl.metadata (30 kB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mlflow in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (2.19.0)
 Requirement already satisfied: mlflow-skinny==2.19.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (2.19.0)
 Requirement already satisfied: Flask&lt;4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (3.1.0)
 Requirement already satisfied: Jinja2&lt;4,&gt;=3.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from mlflow) (3.1.4)
@@ -461,75 +494,49 @@ Requirement already satisfied: smmap&lt;6,&gt;=3.0.1 in c:\users\bhavya khilrani
 Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (0.4.1)
 Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (4.9)
 Requirement already satisfied: pyasn1&lt;0.7.0,&gt;=0.4.6 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==2.19.0-&gt;mlflow) (0.6.1)
-Using cached mlflow-2.19.0-py3-none-any.whl (27.4 MB)
-Installing collected packages: mlflow
-Successfully installed mlflow-2.19.0
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting dagshub
-  Downloading dagshub-0.4.0-py3-none-any.whl.metadata (11 kB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: dagshub in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (0.4.0)
 Requirement already satisfied: PyYAML&gt;=5 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (6.0.2)
-Collecting appdirs&gt;=1.4.4 (from dagshub)
-  Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+Requirement already satisfied: appdirs&gt;=1.4.4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (1.4.4)
 Requirement already satisfied: click&gt;=8.0.4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (8.1.7)
-Collecting httpx&gt;=0.23.0 (from dagshub)
-  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: httpx&gt;=0.23.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (0.28.1)
 Requirement already satisfied: GitPython&gt;=3.1.29 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (3.1.43)
 Requirement already satisfied: rich&gt;=13.1.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (13.9.4)
-Collecting dacite~=1.6.0 (from dagshub)
-  Downloading dacite-1.6.0-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: dacite~=1.6.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (1.6.0)
 Requirement already satisfied: tenacity&gt;=8.2.2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (9.0.0)
-Collecting gql[requests] (from dagshub)
-  Downloading gql-3.5.0-py2.py3-none-any.whl.metadata (9.2 kB)
-Collecting dataclasses-json (from dagshub)
-  Downloading dataclasses_json-0.6.7-py3-none-any.whl.metadata (25 kB)
+Requirement already satisfied: gql[requests] in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (3.5.0)
+Requirement already satisfied: dataclasses-json in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (0.6.7)
 Requirement already satisfied: pandas in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (2.2.3)
-Collecting treelib&gt;=1.6.4 (from dagshub)
-  Downloading treelib-1.7.0-py3-none-any.whl.metadata (1.3 kB)
-Collecting pathvalidate&gt;=3.0.0 (from dagshub)
-  Downloading pathvalidate-3.2.1-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: treelib&gt;=1.6.4 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (1.7.0)
+Requirement already satisfied: pathvalidate&gt;=3.0.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (3.2.1)
 Requirement already satisfied: python-dateutil in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (2.9.0.post0)
-Collecting boto3 (from dagshub)
-  Downloading boto3-1.35.86-py3-none-any.whl.metadata (6.7 kB)
-Collecting dagshub-annotation-converter&gt;=0.1.0 (from dagshub)
-  Downloading dagshub_annotation_converter-0.1.2-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: boto3 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (1.35.86)
+Requirement already satisfied: dagshub-annotation-converter&gt;=0.1.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub) (0.1.2)
 Requirement already satisfied: colorama in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from click&gt;=8.0.4-&gt;dagshub) (0.4.6)
-Collecting lxml (from dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub)
-  Downloading lxml-5.3.0-cp313-cp313-win_amd64.whl.metadata (3.9 kB)
+Requirement already satisfied: lxml in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (5.3.0)
 Requirement already satisfied: pillow in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (11.0.0)
 Requirement already satisfied: pydantic&gt;=2.0.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (2.10.4)
 Requirement already satisfied: typing-extensions in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (4.12.2)
 Requirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from GitPython&gt;=3.1.29-&gt;dagshub) (4.0.11)
 Requirement already satisfied: anyio in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from httpx&gt;=0.23.0-&gt;dagshub) (4.7.0)
 Requirement already satisfied: certifi in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from httpx&gt;=0.23.0-&gt;dagshub) (2024.12.14)
-Collecting httpcore==1.* (from httpx&gt;=0.23.0-&gt;dagshub)
-  Downloading httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: httpcore==1.* in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from httpx&gt;=0.23.0-&gt;dagshub) (1.0.7)
 Requirement already satisfied: idna in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from httpx&gt;=0.23.0-&gt;dagshub) (3.10)
 Requirement already satisfied: h11&lt;0.15,&gt;=0.13 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from httpcore==1.*-&gt;httpx&gt;=0.23.0-&gt;dagshub) (0.14.0)
 Requirement already satisfied: markdown-it-py&gt;=2.2.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from rich&gt;=13.1.0-&gt;dagshub) (3.0.0)
 Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.13.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from rich&gt;=13.1.0-&gt;dagshub) (2.18.0)
 Requirement already satisfied: six in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from treelib&gt;=1.6.4-&gt;dagshub) (1.17.0)
-Collecting botocore&lt;1.36.0,&gt;=1.35.86 (from boto3-&gt;dagshub)
-  Downloading botocore-1.35.86-py3-none-any.whl.metadata (5.7 kB)
-Collecting jmespath&lt;2.0.0,&gt;=0.7.1 (from boto3-&gt;dagshub)
-  Downloading jmespath-1.0.1-py3-none-any.whl.metadata (7.6 kB)
-Collecting s3transfer&lt;0.11.0,&gt;=0.10.0 (from boto3-&gt;dagshub)
-  Downloading s3transfer-0.10.4-py3-none-any.whl.metadata (1.7 kB)
-Collecting marshmallow&lt;4.0.0,&gt;=3.18.0 (from dataclasses-json-&gt;dagshub)
-  Downloading marshmallow-3.23.2-py3-none-any.whl.metadata (7.1 kB)
-Collecting typing-inspect&lt;1,&gt;=0.4.0 (from dataclasses-json-&gt;dagshub)
-  Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+Requirement already satisfied: botocore&lt;1.36.0,&gt;=1.35.86 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from boto3-&gt;dagshub) (1.35.86)
+Requirement already satisfied: jmespath&lt;2.0.0,&gt;=0.7.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from boto3-&gt;dagshub) (1.0.1)
+Requirement already satisfied: s3transfer&lt;0.11.0,&gt;=0.10.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from boto3-&gt;dagshub) (0.10.4)
+Requirement already satisfied: marshmallow&lt;4.0.0,&gt;=3.18.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dataclasses-json-&gt;dagshub) (3.23.2)
+Requirement already satisfied: typing-inspect&lt;1,&gt;=0.4.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from dataclasses-json-&gt;dagshub) (0.9.0)
 Requirement already satisfied: graphql-core&lt;3.3,&gt;=3.2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gql[requests]-&gt;dagshub) (3.2.5)
-Collecting yarl&lt;2.0,&gt;=1.6 (from gql[requests]-&gt;dagshub)
-  Downloading yarl-1.18.3-cp313-cp313-win_amd64.whl.metadata (71 kB)
-Collecting backoff&lt;3.0,&gt;=1.11.1 (from gql[requests]-&gt;dagshub)
-  Downloading backoff-2.2.1-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.6 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gql[requests]-&gt;dagshub) (1.18.3)
+Requirement already satisfied: backoff&lt;3.0,&gt;=1.11.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gql[requests]-&gt;dagshub) (2.2.1)
 Requirement already satisfied: requests&lt;3,&gt;=2.26 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gql[requests]-&gt;dagshub) (2.32.3)
-Collecting requests-toolbelt&lt;2,&gt;=1.0.0 (from gql[requests]-&gt;dagshub)
-  Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: requests-toolbelt&lt;2,&gt;=1.0.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from gql[requests]-&gt;dagshub) (1.0.0)
 Requirement already satisfied: numpy&gt;=1.26.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pandas-&gt;dagshub) (2.2.0)
 Requirement already satisfied: pytz&gt;=2020.1 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pandas-&gt;dagshub) (2024.2)
 Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pandas-&gt;dagshub) (2024.2)
@@ -541,42 +548,14 @@ Requirement already satisfied: packaging&gt;=17.0 in c:\users\bhavya khilrani\ap
 Requirement already satisfied: annotated-types&gt;=0.6.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pydantic&gt;=2.0.0-&gt;dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (0.7.0)
 Requirement already satisfied: pydantic-core==2.27.2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from pydantic&gt;=2.0.0-&gt;dagshub-annotation-converter&gt;=0.1.0-&gt;dagshub) (2.27.2)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from requests&lt;3,&gt;=2.26-&gt;gql[requests]-&gt;dagshub) (3.4.0)
-Collecting mypy-extensions&gt;=0.3.0 (from typing-inspect&lt;1,&gt;=0.4.0-&gt;dataclasses-json-&gt;dagshub)
-  Downloading mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
-Collecting multidict&gt;=4.0 (from yarl&lt;2.0,&gt;=1.6-&gt;gql[requests]-&gt;dagshub)
-  Downloading multidict-6.1.0-cp313-cp313-win_amd64.whl.metadata (5.1 kB)
-Collecting propcache&gt;=0.2.0 (from yarl&lt;2.0,&gt;=1.6-&gt;gql[requests]-&gt;dagshub)
-  Downloading propcache-0.2.1-cp313-cp313-win_amd64.whl.metadata (9.5 kB)
-Downloading dagshub-0.4.0-py3-none-any.whl (254 kB)
-Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
-Downloading dacite-1.6.0-py3-none-any.whl (12 kB)
-Downloading dagshub_annotation_converter-0.1.2-py3-none-any.whl (33 kB)
-Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
-Downloading httpcore-1.0.7-py3-none-any.whl (78 kB)
-Downloading pathvalidate-3.2.1-py3-none-any.whl (23 kB)
-Downloading treelib-1.7.0-py3-none-any.whl (18 kB)
-Downloading boto3-1.35.86-py3-none-any.whl (139 kB)
-Downloading dataclasses_json-0.6.7-py3-none-any.whl (28 kB)
-Downloading backoff-2.2.1-py3-none-any.whl (15 kB)
-Downloading botocore-1.35.86-py3-none-any.whl (13.3 MB)
-   ---------------------------------------- 0.0/13.3 MB ? eta -:--:--
-   ------------ --------------------------- 4.2/13.3 MB 21.9 MB/s eta 0:00:01
-   -------------------------------- ------- 10.7/13.3 MB 26.5 MB/s eta 0:00:01
-   ---------------------------------------- 13.3/13.3 MB 25.3 MB/s eta 0:00:00
-Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
-Downloading marshmallow-3.23.2-py3-none-any.whl (49 kB)
-Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
-Downloading s3transfer-0.10.4-py3-none-any.whl (83 kB)
-Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
-Downloading yarl-1.18.3-cp313-cp313-win_amd64.whl (315 kB)
-Downloading gql-3.5.0-py2.py3-none-any.whl (74 kB)
-Downloading lxml-5.3.0-cp313-cp313-win_amd64.whl (3.8 MB)
-   ---------------------------------------- 0.0/3.8 MB ? eta -:--:--
-   ---------------------------------------- 3.8/3.8 MB 30.9 MB/s eta 0:00:00
-Downloading multidict-6.1.0-cp313-cp313-win_amd64.whl (28 kB)
-Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
-Downloading propcache-0.2.1-cp313-cp313-win_amd64.whl (43 kB)
-Installing collected packages: appdirs, treelib, propcache, pathvalidate, mypy-extensions, multidict, marshmallow, lxml, jmespath, httpcore, dacite, backoff, yarl, typing-inspect, requests-toolbelt, httpx, botocore, s3transfer, gql, dataclasses-json, dagshub-annotation-converter, boto3, dagshub
+Requirement already satisfied: mypy-extensions&gt;=0.3.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from typing-inspect&lt;1,&gt;=0.4.0-&gt;dataclasses-json-&gt;dagshub) (1.0.0)
+Requirement already satisfied: multidict&gt;=4.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from yarl&lt;2.0,&gt;=1.6-&gt;gql[requests]-&gt;dagshub) (6.1.0)
+Requirement already satisfied: propcache&gt;=0.2.0 in c:\users\bhavya khilrani\appdata\local\programs\python\python313\lib\site-packages (from yarl&lt;2.0,&gt;=1.6-&gt;gql[requests]-&gt;dagshub) (0.2.1)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR: Ignored the following versions that require a different python version: 4.0.0 Requires-Python &gt;=3.7, &lt;3.11; 4.1.0 Requires-Python &gt;=3.7, &lt;3.12; 4.1.1 Requires-Python &gt;=3.7, &lt;3.12; 4.1.2 Requires-Python &gt;=3.7, &lt;3.12; 4.10.0 Requires-Python &lt;3.13,&gt;=3.7; 4.11.0 Requires-Python &lt;3.13,&gt;=3.7; 4.12.0 Requires-Python &lt;3.13,&gt;=3.7; 4.12.1 Requires-Python &lt;3.13,&gt;=3.7; 4.2.0 Requires-Python &gt;=3.7, &lt;3.12; 4.3.0 Requires-Python &gt;=3.7, &lt;3.12; 4.3.1 Requires-Python &gt;=3.7, &lt;3.12; 4.3.2 Requires-Python &gt;=3.7, &lt;3.12; 4.4.0 Requires-Python &gt;=3.7, &lt;3.12; 4.5.0 Requires-Python &gt;=3.7, &lt;3.12; 4.5.1 Requires-Python &gt;=3.7, &lt;3.12; 4.6.0 Requires-Python &gt;=3.7, &lt;3.12; 4.6.1 Requires-Python &gt;=3.7, &lt;3.12; 4.6.2 Requires-Python &gt;=3.7, &lt;3.12; 4.6.3 Requires-Python &gt;=3.7, &lt;3.12; 4.6.4 Requires-Python &gt;=3.7, &lt;3.12; 4.6.5 Requires-Python &gt;=3.7, &lt;3.12; 4.7.0 Requires-Python &gt;=3.7, &lt;3.13; 4.8.3 Requires-Python &lt;3.13,&gt;=3.7; 4.9.0 Requires-Python &lt;3.13,&gt;=3.7
+ERROR: Could not find a version that satisfies the requirement ydata_profiling (from versions: none)
+ERROR: No matching distribution found for ydata_profiling
 </pre></div>
 </div>
 </div>
@@ -607,6 +586,20 @@ Installing collected packages: appdirs, treelib, propcache, pathvalidate, mypy-e
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
 <span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
 <span class="kn">from</span> <span class="nn">ydata_profiling</span> <span class="kn">import</span> <span class="n">ProfileReport</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">16</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="ne">---&gt; </span><span class="mi">16</span> <span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">VarianceThreshold</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;xgboost&#39;
 </pre></div>
 </div>
 </div>
@@ -641,7 +634,9 @@ https://dagshub.com/login/oauth/authorize?state=981e40bb-ae47-40b3-85a7-fcc22659
 </pre>
 </div></div>
 </div>
-<p>###Task 1: Create normalized 3NF tables: Customers, Terminals, Transactions</p>
+</section>
+<section id="task-1-create-normalized-3nf-tables-customers-terminals-transactions">
+<h1>Task 1: Create normalized 3NF tables: Customers, Terminals, Transactions<a class="headerlink" href="#task-1-create-normalized-3nf-tables-customers-terminals-transactions" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Create new database and create 3 tables with the schema</p></li>
 <li><p>Load the CSV using csv module and iterate each row in csv</p></li>
@@ -751,7 +746,9 @@ https://dagshub.com/login/oauth/authorize?state=981e40bb-ae47-40b3-85a7-fcc22659
 </div>
 </div>
 </div>
-<p>###Task 2: Fetch data from the database and load into Pandas DataFrame using join statement</p>
+</section>
+<section id="task-2-fetch-data-from-the-database-and-load-into-pandas-dataframe-using-join-statement">
+<h1>#Task 2: Fetch data from the database and load into Pandas DataFrame using join statement<a class="headerlink" href="#task-2-fetch-data-from-the-database-and-load-into-pandas-dataframe-using-join-statement" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Connect to the SQLite database</span>
@@ -847,7 +844,9 @@ https://dagshub.com/login/oauth/authorize?state=981e40bb-ae47-40b3-85a7-fcc22659
 </div>
 </div>
 </div>
-<p>####Task-3 Stratified train-test split</p>
+</section>
+<section id="task-3-stratified-train-test-split">
+<h1>Task-3 Stratified train-test split<a class="headerlink" href="#task-3-stratified-train-test-split" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fraud_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;tx_fraud&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -906,7 +905,9 @@ Name: proportion, dtype: float64
 </div>
 </div>
 </div>
-<p>####Task-4 EDA using yprofile and correlation matrix</p>
+</section>
+<section id="task-4-eda-using-yprofile-and-correlation-matrix">
+<h1>Task-4 EDA using yprofile and correlation matrix<a class="headerlink" href="#task-4-eda-using-yprofile-and-correlation-matrix" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate the profile report</span>
@@ -1198,7 +1199,9 @@ Verify missing data (if any) based on the report, and impute or drop rows/column
 <li><p>Feature Engineering:Create interaction terms or derived features, such as ratios (e.g., tx_amount relative to average terminal or customer amounts).</p></li>
 <li><p>Encoding Categorical Features:If categorical variables are present (not shown in the heatmap), ensure proper encoding before modeling.</p></li>
 </ol>
-<p>####Experiment 1: Preprocessing Pipeline with Logistic Regression and MLflow Logging</p>
+</section>
+<section id="experiment-1-preprocessing-pipeline-with-logistic-regression-and-mlflow-logging">
+<h1>Experiment 1: Preprocessing Pipeline with Logistic Regression and MLflow Logging<a class="headerlink" href="#experiment-1-preprocessing-pipeline-with-logistic-regression-and-mlflow-logging" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># experiment 1</span>
@@ -1310,7 +1313,9 @@ Best F1 Score: 1.0000
 </div>
 </div>
 </div>
-<p>####Experiment 2: Preprocessing Pipeline with Multiple Classifiers and MLflow Logging</p>
+</section>
+<section id="experiment-2-preprocessing-pipeline-with-multiple-classifiers-and-mlflow-logging">
+<h1>Experiment 2: Preprocessing Pipeline with Multiple Classifiers and MLflow Logging<a class="headerlink" href="#experiment-2-preprocessing-pipeline-with-multiple-classifiers-and-mlflow-logging" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># experiment-2</span>
@@ -1595,6 +1600,7 @@ AttributeError: &#39;super&#39; object has no attribute &#39;__sklearn_tags__&#3
 </div>
 </div>
 </div>
+</section>
 <section id="experiment-3-feature-engineering-and-attribute-combination">
 <h1>Experiment 3: Feature Engineering and Attribute Combination<a class="headerlink" href="#experiment-3-feature-engineering-and-attribute-combination" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
@@ -1706,7 +1712,9 @@ AttributeError: &#39;super&#39; object has no attribute &#39;__sklearn_tags__&#3
 </div>
 </div>
 </div>
-<p>####Experiment 4: Feature Selection using Correlation Threshold, Feature Importance, and Variance Threshold</p>
+</section>
+<section id="experiment-4-feature-selection-using-correlation-threshold-feature-importance-and-variance-threshold">
+<h1>Experiment 4: Feature Selection using Correlation Threshold, Feature Importance, and Variance Threshold<a class="headerlink" href="#experiment-4-feature-selection-using-correlation-threshold-feature-importance-and-variance-threshold" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># experiment 4</span>
@@ -1827,7 +1835,9 @@ AttributeError: &#39;super&#39; object has no attribute &#39;__sklearn_tags__&#3
 </div>
 </div>
 </div>
-<p>####Experiment 5: PCA for Dimensionality Reduction</p>
+</section>
+<section id="experiment-5-pca-for-dimensionality-reduction">
+<h1>Experiment 5: PCA for Dimensionality Reduction<a class="headerlink" href="#experiment-5-pca-for-dimensionality-reduction" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># experiment 5</span>
@@ -1952,7 +1962,9 @@ AttributeError: &#39;super&#39; object has no attribute &#39;__sklearn_tags__&#3
 </div>
 </div>
 </div>
-<p>####Experiment 6: Trainind SVM Model with Preprocessing, Evaluation, and MLflow Logging</p>
+</section>
+<section id="experiment-6-trainind-svm-model-with-preprocessing-evaluation-and-mlflow-logging">
+<h1>Experiment 6: Trainind SVM Model with Preprocessing, Evaluation, and MLflow Logging<a class="headerlink" href="#experiment-6-trainind-svm-model-with-preprocessing-evaluation-and-mlflow-logging" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># experiment 6</span>
@@ -2036,7 +2048,9 @@ AttributeError: &#39;super&#39; object has no attribute &#39;__sklearn_tags__&#3
 </div>
 </div>
 </div>
-<p>####Experiment 7: Training a Naive Bayes Model with Evaluation, Visualization, and MLflow Logging</p>
+</section>
+<section id="experiment-7-training-a-naive-bayes-model-with-evaluation-visualization-and-mlflow-logging">
+<h1>Experiment 7: Training a Naive Bayes Model with Evaluation, Visualization, and MLflow Logging<a class="headerlink" href="#experiment-7-training-a-naive-bayes-model-with-evaluation-visualization-and-mlflow-logging" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#experiment 7</span>
@@ -2161,20 +2175,20 @@ Confusion Matrix:
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown.html"
+       href="demovideo.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Demo video</p>
       </div>
     </a>
     <a class="right-next"
-       href="markdown-notebooks.html"
+       href="linktoprojects.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">Links to Project:</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2184,6 +2198,34 @@ Confusion Matrix:
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ML experiments</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-create-normalized-3nf-tables-customers-terminals-transactions">Task 1: Create normalized 3NF tables: Customers, Terminals, Transactions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-fetch-data-from-the-database-and-load-into-pandas-dataframe-using-join-statement">#Task 2: Fetch data from the database and load into Pandas DataFrame using join statement</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-stratified-train-test-split">Task-3 Stratified train-test split</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-eda-using-yprofile-and-correlation-matrix">Task-4 EDA using yprofile and correlation matrix</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-1-preprocessing-pipeline-with-logistic-regression-and-mlflow-logging">Experiment 1: Preprocessing Pipeline with Logistic Regression and MLflow Logging</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-2-preprocessing-pipeline-with-multiple-classifiers-and-mlflow-logging">Experiment 2: Preprocessing Pipeline with Multiple Classifiers and MLflow Logging</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-3-feature-engineering-and-attribute-combination">Experiment 3: Feature Engineering and Attribute Combination</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-4-feature-selection-using-correlation-threshold-feature-importance-and-variance-threshold">Experiment 4: Feature Selection using Correlation Threshold, Feature Importance, and Variance Threshold</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-5-pca-for-dimensionality-reduction">Experiment 5: PCA for Dimensionality Reduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-6-trainind-svm-model-with-preprocessing-evaluation-and-mlflow-logging">Experiment 6: Trainind SVM Model with Preprocessing, Evaluation, and MLflow Logging</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-7-training-a-naive-bayes-model-with-evaluation-visualization-and-mlflow-logging">Experiment 7: Training a Naive Bayes Model with Evaluation, Visualization, and MLflow Logging</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
