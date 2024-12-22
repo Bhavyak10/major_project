@@ -1,16 +1,6 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: resume 
-- file: notebooks
-- file: markdown-notebooks
-- file: toc
-
-toc:
-  - title: "Resume"
-    url: "assets/resume.pdf"
-    type: file
+  - file: markdown
+  - file: notebooks
+  - file: markdown-notebooks
